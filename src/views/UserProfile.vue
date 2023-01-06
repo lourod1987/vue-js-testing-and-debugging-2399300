@@ -1,7 +1,7 @@
 <template>
     <div class="container">
     <div class="main-body">
-    
+
           <!-- Breadcrumb -->
           <nav aria-label="breadcrumb" class="main-breadcrumb">
             <ol class="breadcrumb">
@@ -11,7 +11,7 @@
             </ol>
           </nav>
           <!-- /Breadcrumb -->
-    
+
           <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -174,7 +174,7 @@
 
 <script>
 export default {
-    name : "Profile"
+  name: 'UserProfile'
 }
 </script>
 
@@ -183,7 +183,7 @@ body{
     margin-top:20px;
     color: #1a202c;
     text-align: left;
-    background-color: #e2e8f0;    
+    background-color: #e2e8f0;
 }
 .main-body {
     padding: 15px;

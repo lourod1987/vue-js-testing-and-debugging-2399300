@@ -1,5 +1,5 @@
 <template>
-  
+
       <div class="container">
         <!-- <div class="row">
           <div class="col-md-12">
@@ -26,6 +26,9 @@
                     </div>
 
                     <div class="card-body">
+                       <div v-if="showError" class="alert alert-danger" role="alert">
+                        Please enter your email and password
+                      </div>
                       <form>
                         <div>
                           <div class="form-group">
@@ -40,31 +43,38 @@
                         </div>
                       </form>
                     </div>
-                    
+
                   </div>
                 </div>
               </div>
-              
-              
-              
-              
+
             </div>
         </div>
 
-    
     </div>
 </template>
 
 <script>
 
 export default {
-  name: 'Home',
-  components: {
-    
+  name: 'MainHome',
+  data () {
+    return {
+      email: null,
+      password: null,
+      showError: false
+    }
   },
-  methods : {
-    login(){
-      this.$router.push({path : "profile"})
+  components: {
+
+  },
+  methods: {
+    login () {
+      if (this.email && this.password) {
+        this.$router.push({ path: 'profile' })
+      } else {
+        this.showError = true
+      }
     }
   }
 }
@@ -75,7 +85,6 @@ export default {
   padding: 0;
   margin: 0;
 }
-
 
 #banner-section{
   background-image: url("/home_page_back.jpg");
